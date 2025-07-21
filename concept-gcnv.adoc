@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: concept-gcnv.html 
+keywords: google cloud netapp volumes, cost, price, features, google cloud netapp volumes features, gcnv, supported regions, google regions, google cloud netapp volumes regions 
+summary: 'Google Cloud NetApp Volumes permet aux entreprises de migrer et d"exécuter leurs applications essentielles, gourmandes en performances et sensibles à la latence, dans Google sans avoir besoin de les refactoriser pour le cloud.' 
+---
+= En savoir plus sur Google Cloud NetApp Volumes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Google Cloud NetApp volumes est un service de stockage des données cloud entièrement géré qui offre des fonctionnalités avancées de gestion des données et des performances hautement évolutives.
+
+NetApp Volumes permet d'accélérer les temps de déploiement, de gérer vos charges de travail et vos applications et de migrer les charges de travail vers le cloud tout en conservant les performances et les fonctionnalités du stockage sur site.
+
+
+
+== Caractéristiques
+
+* Exécute les applications d’entreprise plus rapidement et plus efficacement.
+* Réduit les coûts de stockage dans le cloud jusqu'à 90 %.
+* Répond aux exigences de disponibilité, de disponibilité et de sécurité.
+* Prend en charge les environnements NFS, SMB et multiprotocoles.
+
+
+
+
+== Le coût
+
+Les volumes créés par Google Cloud NetApp Volumes sont facturés sur votre abonnement au service, et non via BlueXP.
+
+La découverte d'une région ou d'un volume Google Cloud NetApp Volumes à partir de BlueXP est gratuite.
+
+
+
+== Régions prises en charge
+
+https://cloud.google.com/netapp/volumes/docs/discover/service-levels#supported_regions["Afficher les régions prises en charge par Google Cloud NetApp Volumes"^]
+
+
+
+== Obtenir de l'aide
+
+Pour obtenir une assistance technique, envoyez une demande via le portail Google Cloud. Sélectionnez votre abonnement Google Cloud et le service * Google Cloud NetApp Volumes* sous * Stockage *. Renseignez les informations requises.
+
+Utilisez le chat BlueXP pour les questions générales sur le fonctionnement de Google Cloud NetApp Volumes dans BlueXP.
+
+Pour des questions générales sur Google Cloud NetApp Volumes, envoyez un e-mail à l'équipe Google Cloud de NetApp à l'adresse gcinfo@netapp.com.
+
+Pour tout problème technique lié à vos volumes cloud, vous pouvez créer un dossier de support technique à partir de Google Cloud Console. Voir link:https://cloud.google.com/netapp/volumes/docs/support["obtenir de l'aide"^] pour plus de détails.
+
+
+
+== Liens connexes
+
+* https://cloud.google.com/netapp/volumes/docs/discover/overview["Documentation de Google Cloud NetApp Volumes"^]
+* https://docs.netapp.com/us-en/bluexp-copy-sync/index.html["Documentation sur la copie et la synchronisation BlueXP"^]
+

@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: task-create-working-env.html 
+keywords: google cloud netapp volumes, google cloud, netapp cloud volumes, create netapp cloud volumes, discover netapp cloud volumes service for gcnv, cloud volumes service subscription, discover cloud volumes service subscription, discover region, allowed clients 
+summary: Ajoutez un environnement de travail Netapp Volumes pour Google Cloud dans BlueXP pour afficher et gérer les volumes. 
+---
+= Ajouter un environnement de travail Google Cloud NetApp Volumes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Après avoir configuré un compte de service, ajoutez un environnement de travail Google Cloud NetApp Volumes dans BlueXP afin de pouvoir afficher vos instances Google Cloud NetApp Volumes .
+
+Les volumes cloud pour cet abonnement sont affichés dans l'environnement de travail.
+
+
+NOTE: Si vous avez des abonnements et des volumes dans plusieurs projets Google Cloud, vous devez effectuer cette tâche pour chaque projet.
+
+.Avant de commencer
+Vous devez disposer des informations suivantes lors de l'ajout d'un abonnement pour chaque projet :
+
+* Identifiants de compte de service (clé privée JSON que vous avez téléchargée)
+* Nom du projet
+
+
+.Étapes
+. Dans le menu de navigation BlueXP, sélectionnez *stockage > Canvas*.
+. Sur la page Canvas, sélectionnez *Ajouter un environnement de travail* et sélectionnez *Google Cloud Platform*.
+. À côté de *Google Cloud Netapp Volumes*, sélectionnez *Découvrir*.
+. Fournissez des informations sur votre abonnement NetApp Volumes :
++
+.. Saisissez le nom de l'environnement de travail que vous souhaitez utiliser.
+.. Copiez/collez la clé privée JSON que vous avez téléchargée au cours des étapes précédentes.
+.. Sélectionnez *Appliquer les informations d'identification*.
+.. Sélectionnez le nom de votre projet Google Cloud.
+.. Sélectionnez la région dans laquelle vous souhaitez créer l'environnement de travail. Cette région doit être prise en charge par Google Cloud NetApp Volumes.
+.. Sélectionnez *découvrir*.
++
+image:screenshot_create_environment.png["Capture d’écran de l’ajout d’informations d’identification pour un abonnement Google Cloud NetApp Volumes ."]
+
+
+
+
+
+.Résultat
+BlueXP affiche votre environnement de travail Google Cloud NetApp Volumes .
+
+image:screenshot_gcnv_environment.png["Une capture d'écran de l'environnement de travail de Google Cloud NetApp Volumes Service."]
+
+.Et la suite ?
+link:task-manage-volumes.html["Visualisez vos volumes"].
