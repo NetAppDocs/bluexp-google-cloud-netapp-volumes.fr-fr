@@ -16,18 +16,18 @@ summary: 'BlueXP a besoin d"accéder à l"API Google Cloud NetApp Volumes et aux
 [role="lead"]
 BlueXP a besoin des autorisations appropriées via un compte de service Google Cloud.
 
-
-
-== Configurez un compte de service
-
 Effectuez les tâches suivantes pour que BlueXP puisse accéder à votre projet Google Cloud :
 
 * Si vous n’avez pas encore de compte de service existant, créez-en un nouveau.
 * Ajoutez le membre du compte de service à votre projet et attribuez-lui des rôles spécifiques (autorisations).
 * Créez et téléchargez une paire de clés pour le compte de service utilisé pour s'authentifier auprès de Google.
+* Accordez le rôle IAM dans le projet partagé.
 
 
-.Étapes
+
+
+== Configurez un compte de service
+
 . Dans la console Google Cloud,  https://console.cloud.google.com/iam-admin/serviceaccounts["Accédez à la page comptes de service"^] .
 . Cliquez sur *sélectionnez un projet*, choisissez votre projet et cliquez sur *Ouvrir*.
 . (Facultatif) Pour créer un compte de service, procédez comme suit :
@@ -40,7 +40,24 @@ La console cloud génère un ID de compte de service basé sur ce nom. Modifiez 
 .. Pour définir maintenant les contrôles d'accès, cliquez sur *Créer*, puis sur *TERMINÉ* en bas de la page et passez à l'étape suivante.
 
 
-. Dans la page _IAM_, cliquez sur *Ajouter* et remplissez les champs de la page _Ajouter des membres_ :
+
+
+
+
+== Créer et télécharger une paire de clés
+
+. Cliquez sur le nom du compte de service, puis, à partir de la page _Détails du compte de service_, cliquez sur *Ajouter touche > Créer une nouvelle clé*.
+. Sélectionnez *JSON* comme type de clé et cliquez sur *Create*.
++
+En cliquant sur *Créer*, votre nouvelle paire de clés publique/privée est générée et téléchargée sur votre système. Il sert de seule copie de la clé privée. Stockez ce fichier de façon sécurisée car il peut être utilisé pour s'authentifier en tant que compte de service.
+
+
+
+
+
+== Ajouter le membre du compte de service
+
+. Dans la page _IAM_, cliquez sur *Ajouter* et remplissez les champs de la page _Ajouter des membres_ :
 +
 .. Dans le champ nouveaux membres, entrez l'ID de compte de service complet.
 +
@@ -52,17 +69,25 @@ Par exemple : \user1-service-account-gcnv@project1.iam.gserviceaccount.com
 *** _Visionneuse de volumes Google Cloud NetApp
 
 
-.. Cliquez sur *Enregistrer*.
 
 
-. Cliquez sur le nom du compte de service, puis, à partir de la page _Détails du compte de service_, cliquez sur *Ajouter touche > Créer une nouvelle clé*.
-. Sélectionnez *JSON* comme type de clé et cliquez sur *Create*.
-+
-En cliquant sur *Créer*, votre nouvelle paire de clés publique/privée est générée et téléchargée sur votre système. Il sert de seule copie de la clé privée. Stockez ce fichier de façon sécurisée car il peut être utilisé pour s'authentifier en tant que compte de service.
+. Cliquez sur *Enregistrer*.
 
 
 
-Pour obtenir des instructions détaillées, consultez la documentation Google Cloud :
+
+== Créer un VPC partagé
+
+Dans chaque projet GCP supplémentaire qui utilisera le compte de service, procédez comme suit :
+
+. Dans la page _IAM_, sélectionnez le projet hôte VPC partagé dans le menu déroulant du projet.
+. Cliquez sur *Ajouter un principal*.
+. Dans le champ *Nouveaux principaux*, saisissez l’adresse e-mail de votre compte de service.
+. Dans la liste déroulante *Sélectionner un rôle*, choisissez le rôle d’administrateur Google Cloud NetApp Volumes .
+. Cliquez sur *Enregistrer*.
+
+
+Pour les étapes détaillées, reportez-vous à la documentation de Google Cloud :
 
 * link:https://cloud.google.com/iam/docs/roles-permissions/netapp["Rôles et autorisations de Google Cloud NetApp Volumes"^]
 * link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Création et gestion des comptes de service"^]
